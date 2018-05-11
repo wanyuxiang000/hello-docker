@@ -1,3 +1,10 @@
-FROM busybox:latest
+FROM ubuntu:latest
 
-CMD echo hello world!
+RUN apt-get update
+
+RUN apt-get -y install git
+
+ENTRYPOINT ["git"]
+
+CMD {"--version"}
+
