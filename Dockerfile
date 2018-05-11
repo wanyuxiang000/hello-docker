@@ -1,10 +1,5 @@
-FROM ubuntu:latest
+#基于特定的镜像
+FROM ubuntu:14.04@sha256:9c3bd827d424829a849848c288838166e8ef329960186cf474644215de5b5138
+CMD ["echo","abc!"]
 
-RUN apt-get update
-
-RUN apt-get -y install git
-
-ENTRYPOINT ["git"]
-
-CMD {"--version"}
 
